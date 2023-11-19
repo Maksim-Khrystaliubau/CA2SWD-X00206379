@@ -1,43 +1,55 @@
 {% extends "base.html" %}
 {% load static %}
 {% block metadescription %}
-{{ product.description|truncatewords:155 }}
+    {{ product.description|truncatewords:155 }}
 {% endblock %}
+
 {% block title %}
-{{ product.name }} - Perfect Cushion Store
+    {{ product.name }} - Perfect Cushion Store
 {% endblock %}
+
+{% block head %}
+    <style>
+        .image-container.zoomed {
+            max-height: 400px; /* Adjust the desired height */
+            transition: max-height 0.3s ease; /* Add smooth transition effect */
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
-<div class = "row my_prod_row_class">
-    <div class = "mx-auto">
-        <p><a href="{% url 'shop:all_products' %}">Home</a> | <a
-                href="{{product.category.get_url }}">{{product.category}}</a>
-            |{{product.name}}</p>
+<div class="container my_prod_row_class">
+    <div class="mx-auto">
+        <p><a href="{% url 'shop:all_products' %}">Home</a> | <a href="{{product.category.get_url }}">{{product.category}}</a> | {{product.name}}</p>
     </div>
-    <div class = "container">
+    <div class="container">
         <br>
-        <div class = "row">
-            <div class = "col-12 col-sm-12 col-md-12 col-lg-6 text-center">
-                <div style = "min-width: 18rem;">
-                    <img src="{{product.image.url}}"
-                        alt="{{product.name}}">
+        <div class="row">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="text-center image-container" style="height: 300px; overflow: hidden;">
+                    <img class="my_image img-fluid" style="height: 100%; width: 100%; object-fit: cover;" src="{{product.image.url}}" alt="{{product.name}}" onclick="zoomImage(this)">
                 </div>
             </div>
-            <div class = "col-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="col-12 col-md-6">
                 <div>
-                    <h1 class ="my_prod_title">{{product.name}}</h1>
+                    <h1 class="my_prod_title">{{product.name}}</h1>
                     <p>€{{product.price}}</p>
-                    <p class = "my_title">Product Description</p>
-                    <p class ="text-justify my_prod_text">{{product.description}}</p>
-                    {% if product.stock == 0%}
-                    <p class ="text-justify my_prod_text"><b>Out of Stock</b></p>
+                    <p class="my_title">Product Description</p>
+                    <p class="text-justify my_prod_text">{{product.description}}</p>
+                    {% if product.stock == 0 %}
+                    <p class="text-justify my_prod_text"><b>Out of Stock</b></p>
                     {% else %}
                     <a class="btn btn-secondary" href="{% url 'cart:add_cart' product.id %}">Add to Cart</a>
-
-
                     {% endif %}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function zoomImage(element) {
+        element.classList.toggle("zoomed");
+    }
+</script>
 {% endblock %}

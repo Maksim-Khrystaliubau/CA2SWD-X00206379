@@ -53,13 +53,20 @@
         <div class="row mx-auto">
         {% for product in prods %}
         <div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4">
-            <div class="card text-center" style="min-width:18rem;">
-                <a class="img" href="{{product.get_absolute_url}}">
-                    <img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}">
-                </a>
+            <div class="card text-black">
+                <img class="card-img-top my_image" src="{{ product.image.url }}" alt="{{ product.name }}">
                 <div class="card-body">
-                    <h4>{{ product.name }}</h4>
-                    <p>€{{ product.price }}</p>
+                    <div class="text-center">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                    </div>
+                    <div>
+                        <div class="d-flex justify-content-between">
+                            <span>{{ product.category }}</span><span>€{{ product.price }}</span>
+                        </div>
+                    </div>
+                    {% if product.stock > 0 %}
+                        <a class="btn btn-secondary" href="{% url 'cart:add_cart' product.id %}">Add to Cart</a>
+                    {% endif %}
                 </div>
             </div>
         </div>

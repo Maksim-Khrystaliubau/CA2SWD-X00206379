@@ -1,121 +1,106 @@
-/****Navbar****/
-.nav-item {
-  letter-spacing: 0.2em;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
+/* Navbar */
+.nav-item,
 .dropdown-item {
+  letter-spacing: 0.1em;
   font-size: 14px;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
+  color: #333;
 }
 
-/****Footer****/
+/* Footer */
 .my_footer {
   background-color: #f8f9fa;
   height: 60px;
+  line-height: 60px;
 }
 
 .my_footer p {
-  padding-top: 20px;
   font-size: 14px;
 }
 
-/****Category page****/
+/* Category page */
 .my_row_class {
   padding-top: 15px;
 }
 
-.my_row_class .mx-auto p {
-  color: #000;
-  font-size: 12px;
-}
-
+.my_row_class .mx-auto p,
 .my_row_class .mx-auto p a {
-  color: #000;
+  color: #333;
   font-size: 12px;
   text-decoration: none;
 }
 
-/****Category page****/
+/* Image styling */
 .my_image {
   width: 100%;
+  max-width: 300px;
   height: auto;
-  max-width: 300px; /* Set the maximum width based on your design preferences */
-  max-height: 300px; /* Set the maximum height based on your design preferences */
   display: block;
   margin: 0 auto;
 }
 
-.my_title {
-  font-size: 16px;
+/* Card styling */
+.card-body h4 {
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
-
-.my_image_padding {
-  padding-top: 5px;
+  letter-spacing: 0.1em;
+  color: #333;
 }
 
 .my_bottom_margin {
   margin-bottom: 10px;
 }
 
-.card-body h4 {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+/* Product card styling */
+.my_bottom_margin {
+  margin-bottom: 20px;
 }
 
-/****Product Page****/
-.my_prod_row_class {
-  padding-top: 15px;
-  padding-bottom: 20px;
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border: none; /* Remove the border */
 }
 
-.my_prod_row_class .mx-auto p {
-  color: #000;
-  font-size: 12px;
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.my_prod_row_class .mx-auto p a {
-  color: #000;
-  font-size: 12px;
-  text-decoration: none;
+.card-body {
+  padding: 15px;
 }
 
 .my_image {
   width: 100%;
-  height: auto;
-  max-width: 300px; /* Set the maximum width based on your design preferences */
-  max-height: 300px; /* Set the maximum height based on your design preferences */
-  display: block;
-  margin: 0 auto;
+  height: 200px; /* Adjust the height based on your design preferences */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 8px; /* Add a slight border radius for a rounded look */
 }
 
-.my_prod_title {
-  font-size: 30px;
+.card-body h4 {
+  font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  padding-top: 15px;
-  padding-bottom: 10px;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  color: #333; /* Adjusted text color for better contrast */
 }
 
-.my_prod_text {
-  padding-right: 20px;
+.card-body p {
+  font-size: 16px;
+  color: #666; /* Adjusted text color for better contrast */
 }
 
-/****Cart Page****/
+
+/* Cart page */
 .my_custom_table {
   min-width: 400px;
   font-size: 14px;
 }
 
 .my_custom_thead {
-  font-weight: normal;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   background-color: #f8f9fa!important;
 }
 
@@ -124,43 +109,31 @@
   height: 100px;
 }
 
-.custom_a {
-  text-decoration: none;
-}
-
+.custom_a,
 .custom_icon {
   text-decoration: none;
-  color: #868e96 !important;
 }
 
-.my_custom_button {
-  margin-top: 5px;
-}
-
-/***Stripe Button***/
-.stripe-button-el, .my_custom_button {
+.my_custom_button,
+.stripe-button-el {
   width: 100% !important;
   display: block !important;
-  background-color: #868e96 !important;
+  background-color: #28a745 !important; /* Green color */
   border: 0px !important;
-  background-image: none !important;
+  color: #fff !important;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.stripe-button-el span {
-  display: block;
-  position: relative;
-  padding: 0px 12px;
-  height: 36px !important;
-  line-height: 36px !important;
-  font-family: 'Roboto', sans-serif !important;
-  font-size: 16px !important;
-  color: #fff !important;
-  background-image: none !important;
-  background: none !important;
+.my_custom_button:hover,
+.stripe-button-el:hover {
+  background-color: #218838 !important; /* Darker green on hover */
 }
 
 .errorlist li {
-  color: red;
+  color: #dc3545; /* Red color for error messages */
   font-weight: bold;
 }
 
@@ -170,28 +143,28 @@
 
 .my_top_navbar_div {
   height: 60px;
-  line-height: 50px;
+  line-height: 60px;
 }
 
 .my_custom_menu {
-  text-align: right !important;
+  text-align: right;
+}
+
+.my_custom_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .my_custom_menu ul li {
-  list-style: none;
-  color: #000;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 12px;
-  padding-right: 20px;
-  display: inline;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .my_custom_menu ul li a {
   text-decoration: none;
-  color: #000;
-  list-style: none;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+  color: #333;
   font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }

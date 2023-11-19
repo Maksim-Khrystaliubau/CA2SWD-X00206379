@@ -2,11 +2,28 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 from django.core.paginator import Paginator, EmptyPage, InvalidPage
 
-
-
 def pizzas_category(request):
     # Add logic to retrieve and display pizza products
     return render(request, 'shop/pizzas_category.html', {})
+
+def chicken_category(request):
+    chicken_products = Product.objects.filter(category__name='Chicken')
+    # Other logic for pagination, context, etc.
+    return render(request, 'shop/chicken_category.html', {'chicken_products': chicken_products})
+
+def drinks_category(request):
+    drinks = Product.objects.filter(category__name='Drinks')
+    paginator = Paginator(drinks, 12)  # Adjust the number of items per page as needed
+
+    page = request.GET.get('page')
+    try:
+        drinks = paginator.page(page)
+    except PageNotAnInteger:
+        drinks = paginator.page(1)
+    except EmptyPage:
+        drinks = paginator.page(paginator.num_pages)
+
+    return render(request, 'shop/drinks_category.html', {'drinks': drinks})
 
 
 def prod_list(request, category_id=None):
@@ -33,7 +50,7 @@ def prod_list(request, category_id=None):
     try:
         products = paginator.page(page)
     except (EmptyPage, InvalidPage):
-        products = paginator.page(paginator.num_pages())
+        products = paginator.page(paginator.num_pages)
 
     return render(request, 'shop/category.html', {'category': category, 'prods': products})
 

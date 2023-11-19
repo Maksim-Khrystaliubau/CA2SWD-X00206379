@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block metadescription %}
+    {% if category %}
+        {{ category.description|truncatewords:155 }}
+    {% else %}
+        Welcome to our Drinks Collection at the Perfect Cushion Store.
+    {% endif %}
+{% endblock %}
+
+{% block title %}
+    {% if category %}
+        {{ category.name }} - Perfect Cushion Store
+    {% else %}
+        Explore Our Drinks Collection - Perfect Cushion Store
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <!-- Breadcrumb navigation -->
+    {% if category %}
+        <div class="row my_row_class mt-4">
+            <div class="mx-auto">
+                <p><a href="{% url 'shop:all_products' %}">Home</a> | {{ category.name }}</p>
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="mx-auto">
+        {% if category %}
+            <img class="my_image" src="{{ category.image.url }}" alt="{{ category.name }}">
+        </div>
+        <div>
+            <h1 class="text-center my_title">{{ category.name }}</h1>
+            <p class="text-justify">{{ category.description }}</p>
+        </div>
+        {% else %}
+            <img class="my_image my_image_padding" src="{% static 'images/default_drinks_image.jpg' %}" alt="Our Drinks Collection">
+        </div>
+        <br>
+        <div>
+            <h1 class="text-center my_title"> Explore Our Drinks Collection</h1>
+            <p class="text-justify">
+                Discover a refreshing selection of drinks crafted with the finest ingredients for a delightful taste
+                experience. Whether you prefer classic sodas or exotic fruit juices, our drinks collection has something for everyone.
+            </p>
+        </div>
+    {% endif %}
+
+    <div class="container">
+        <div class="row mx-auto">
+            {% for product in drinks %}
+                <div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4">
+                    <div class="card text-black">
+                        <img class="card-img-top my_image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h5 class="card-title" style="min-height: 60px;">{{ product.name }}</h5>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between">
+                                    <span>{{ product.category }}</span><span>€{{ product.price }}</span>
+                                </div>
+                            </div>
+                            {% if product.stock > 0 %}
+                                <a class="btn btn-secondary" href="{% url 'cart:add_cart' product.id %}">Add to Cart</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="mx-auto">
+            {% if drinks.paginator.num_pages > 1 %}
+            <hr>
+            <div class="text-center">
+            {% for pg in drinks.paginator.page_range %}
+                <a href="?page={{pg}}" class="btn btn-light btn-sm {% if drinks.number == pg %}active{% endif %}">
+                    {{pg}}
+                </a>
+            {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <br>
+    </div>
+{% endblock %}

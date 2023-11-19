@@ -1,10 +1,11 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from vouchers.models import Voucher
+from shop.models import Product
 
 class Order(models.Model):
     token = models.CharField(max_length=250, blank=True)
-    total = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Euro Order Total')
+    total = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Euro Order Total', null=True, blank=True)
     emailAddress = models.EmailField(max_length=250, blank=True, verbose_name='Email Address')
     created = models.DateTimeField(auto_now_add=True)
     billingName = models.CharField(max_length=250, null=True, blank=True)
@@ -41,12 +42,20 @@ class Order(models.Model):
     def __str__(self):
         return str(self.id)
 
+    def calculate_total(self):
+        # Calculate the total based on OrderItem instances associated with this order
+        order_items = self.orderitem_set.all()
+        total = sum(item.sub_total() for item in order_items)
+        # Apply discount and update the total
+        total -= total * (self.discount / 100)
+        self.total = total
+        self.save()
 
 class OrderItem(models.Model):
-    product = models.CharField(max_length=250)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='Product')
     quantity = models.IntegerField()
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Euro Price')
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, verbose_name='Order')
+    order = models.ForeignKey('Order', on_delete=models.CASCADE, verbose_name='Order')
 
     class Meta:
         db_table = 'OrderItem'
@@ -55,4 +64,4 @@ class OrderItem(models.Model):
         return self.quantity * self.price
 
     def __str__(self):
-        return self.product
+        return str(self.product)

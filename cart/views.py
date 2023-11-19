@@ -75,7 +75,8 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
             # Creating the order
             try:
                 order_details = Order.objects.create(
-                    # ... (rest of your code for creating order details)
+                    emailAddress=request.user.email,  # Update this with the user's email or any relevant field
+                    # ... (other fields as needed)
                 )
                 order_details.save()
                 if voucher:
@@ -83,9 +84,13 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
                     order_details.voucher = voucher
                     order_details.discount = discount
                     order_details.save()
-                for order_item in cart_items:
+
+                for cart_item in cart_items:
                     oi = OrderItem.objects.create(
-                        # ... (rest of your code for creating order items)
+                        order=order_details,
+                        product=cart_item.product,
+                        quantity=cart_item.quantity,
+                        price=cart_item.product.price,
                     )
                     if voucher != None:
                         discount = (oi.price * (voucher.discount / Decimal('100')))
@@ -93,11 +98,13 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
                     else:
                         oi.price = oi.price * oi.quantity
                     oi.save()
-                    # Reduce stock when order is placed or saved
-                    products = Product.objects.get(id=order_item.product.id)
-                    products.stock = int(order_item.product.stock - order_item.quantity)
+
+                    # Reduce stock when the order is placed or saved
+                    products = Product.objects.get(id=cart_item.product.id)
+                    products.stock = int(cart_item.product.stock - cart_item.quantity)
                     products.save()
-                    order_item.delete()
+                    cart_item.delete()
+
                 return redirect('order:thanks', order_details.id)
             except ObjectDoesNotExist:
                 pass
@@ -124,9 +131,11 @@ def cart_remove(request, product_id):
         cart_item.quantity -= 1
         cart_item.save()
     else:
-        cart_item.delete()
+        # Handle the case where quantity is 1
+        cart_item.delete()  # or cart_item.active = False
 
     return redirect('cart:cart_detail')
+
 
 def full_remove(request, product_id):
     try:

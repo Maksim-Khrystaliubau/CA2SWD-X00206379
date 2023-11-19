@@ -1,0 +1,170 @@
+/* Navbar */
+.nav-item,
+.dropdown-item {
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+/* Footer */
+.my_footer {
+  background-color: #f8f9fa;
+  height: 60px;
+  line-height: 60px;
+}
+
+.my_footer p {
+  font-size: 14px;
+}
+
+/* Category page */
+.my_row_class {
+  padding-top: 15px;
+}
+
+.my_row_class .mx-auto p,
+.my_row_class .mx-auto p a {
+  color: #333;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* Image styling */
+.my_image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Card styling */
+.card-body h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #333;
+}
+
+.my_bottom_margin {
+  margin-bottom: 10px;
+}
+
+/* Product card styling */
+.my_bottom_margin {
+  margin-bottom: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border: none; /* Remove the border */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.my_image {
+  width: 100%;
+  height: 200px; /* Adjust the height based on your design preferences */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 8px; /* Add a slight border radius for a rounded look */
+}
+
+.card-body h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  color: #333; /* Adjusted text color for better contrast */
+}
+
+.card-body p {
+  font-size: 16px;
+  color: #666; /* Adjusted text color for better contrast */
+}
+
+
+/* Cart page */
+.my_custom_table {
+  min-width: 400px;
+  font-size: 14px;
+}
+
+.my_custom_thead {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background-color: #f8f9fa!important;
+}
+
+.custom_image {
+  width: 100px;
+  height: 100px;
+}
+
+.custom_a,
+.custom_icon {
+  text-decoration: none;
+}
+
+.my_custom_button,
+.stripe-button-el {
+  width: 100% !important;
+  display: block !important;
+  background-color: #28a745 !important; /* Green color */
+  border: 0px !important;
+  color: #fff !important;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.my_custom_button:hover,
+.stripe-button-el:hover {
+  background-color: #218838 !important; /* Darker green on hover */
+}
+
+.errorlist li {
+  color: #dc3545; /* Red color for error messages */
+  font-weight: bold;
+}
+
+.my_custom_div {
+  margin-bottom: 20px !important;
+}
+
+.my_top_navbar_div {
+  height: 60px;
+  line-height: 60px;
+}
+
+.my_custom_menu {
+  text-align: right;
+}
+
+.my_custom_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.my_custom_menu ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.my_custom_menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

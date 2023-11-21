@@ -68,6 +68,12 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
     except ObjectDoesNotExist:
         pass
 
+    # Updated code to handle both authenticated and anonymous users
+    if request.user.is_authenticated:
+        email_address = request.user.email
+    else:
+        email_address = None  # or any default value you want to set for anonymous users
+
     if request.method == 'POST':
         try:
             # ... (rest of your code for handling stripe payment)
@@ -75,7 +81,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
             # Creating the order
             try:
                 order_details = Order.objects.create(
-                    emailAddress=request.user.email,  # Update this with the user's email or any relevant field
+                    emailAddress=email_address,
                     # ... (other fields as needed)
                 )
                 order_details.save()
@@ -118,8 +124,11 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
         'counter': counter,
         'data_key': data_key,
         'stripe_total': stripe_total,
-        'description': description, 'voucher_apply_form': voucher_apply_form,
-        'new_total': new_total, 'voucher': voucher, 'discount': discount
+        'description': description,
+        'voucher_apply_form': voucher_apply_form,
+        'new_total': new_total,
+        'voucher': voucher,
+        'discount': discount
     })
 
 def cart_remove(request, product_id):

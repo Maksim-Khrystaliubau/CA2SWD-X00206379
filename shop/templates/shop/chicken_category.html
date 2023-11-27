@@ -5,7 +5,7 @@
     {% if category %}
         {{ category.description|truncatewords:155 }}
     {% else %}
-        Welcome to our Chicken Collection at the Perfect Cushion Store.
+        Welcome to our Chicken Collection at the Perfect Pizzaria Store.
     {% endif %}
 {% endblock %}
 
@@ -51,4 +51,21 @@
 
     <div class="container">
         <div class="row mx-auto">
-            {% for product
+            {% for product in products %}
+                <div class="col-md-4">
+                    <!-- Your product card markup goes here -->
+                    <div class="card">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">{{ product.description }}</p>
+                            <p class="card-text">Price: €{{ product.price }}</p>
+                            <a href="{% url 'shop:product_detail' product.id %}" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Add more details or customize as needed -->
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

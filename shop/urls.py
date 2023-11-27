@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+
 app_name = 'shop'
 
 urlpatterns = [
@@ -10,7 +11,7 @@ urlpatterns = [
     path('pizzas/', views.pizzas_category, name='pizzas_category'),  # Add this line
     path('categories/chicken/', views.chicken_category, name='chicken_category'),
     path('categories/drinks/', views.drinks_category, name='drinks_category'),
-
+   
     
     
 ]

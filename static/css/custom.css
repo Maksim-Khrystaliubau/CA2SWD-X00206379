@@ -4,14 +4,21 @@
   letter-spacing: 0.1em;
   font-size: 14px;
   text-transform: uppercase;
-  color: #333;
+  color: #6c757d; /* Pastel gray */
+}
+.product-description {
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #fff; /* White color */
 }
 
 /* Footer */
 .my_footer {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Light pastel blue */
   height: 60px;
   line-height: 60px;
+}
+.footer-text {
+  color: #fff; /* White color */
 }
 
 .my_footer p {
@@ -25,7 +32,7 @@
 
 .my_row_class .mx-auto p,
 .my_row_class .mx-auto p a {
-  color: #333;
+  color: #6c757d; /* Pastel gray */
   font-size: 12px;
   text-decoration: none;
 }
@@ -44,7 +51,7 @@
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #333;
+  color: #6c757d; /* Pastel gray */
 }
 
 .my_bottom_margin {
@@ -59,11 +66,12 @@
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
-  border: none; /* Remove the border */
+  border: none; 
+  background-color: #e9ecef; 
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .card-body {
@@ -72,9 +80,9 @@
 
 .my_image {
   width: 100%;
-  height: 200px; /* Adjust the height based on your design preferences */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  border-radius: 8px; /* Add a slight border radius for a rounded look */
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px; 
 }
 
 .card-body h4 {
@@ -82,14 +90,13 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 10px;
-  color: #333; /* Adjusted text color for better contrast */
+  color: #6c757d; /* Pastel gray */
 }
 
 .card-body p {
   font-size: 16px;
-  color: #666; /* Adjusted text color for better contrast */
+  color: #868e96; /* Pastel gray with a tint */
 }
-
 
 /* Cart page */
 .my_custom_table {
@@ -118,7 +125,7 @@
 .stripe-button-el {
   width: 100% !important;
   display: block !important;
-  background-color: #28a745 !important; /* Green color */
+  background-color: #20c997 !important; /* Pastel green */
   border: 0px !important;
   color: #fff !important;
   padding: 10px;
@@ -129,7 +136,7 @@
 
 .my_custom_button:hover,
 .stripe-button-el:hover {
-  background-color: #218838 !important; /* Darker green on hover */
+  background-color: #17a2b8 !important; /* Darker shade on hover */
 }
 
 .errorlist li {
@@ -163,7 +170,7 @@
 
 .my_custom_menu ul li a {
   text-decoration: none;
-  color: #333;
+  color: #6c757d; /* Pastel gray */
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -185,7 +192,7 @@ footer {
 
 #social-media-links a {
   margin: 0 10px;
-  color: #333;
+  color: #6c757d; /* Pastel gray */
   text-decoration: none;
   font-size: 14px;
 }
@@ -232,4 +239,3 @@ footer {
 #comment-form button:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
-

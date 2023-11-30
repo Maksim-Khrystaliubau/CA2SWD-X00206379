@@ -21,12 +21,16 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Allergen(models.Model):
+    name = models.CharField(max_length=50)
 
 class Product(models.Model):
     id = models.UUIDField(
         primary_key=True,
         default=uuid.uuid4,
         editable=False)
+    
     name = models.CharField(max_length=250, unique=True)
     description = models.TextField(blank = True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -37,6 +41,7 @@ class Product(models.Model):
     created = models.DateTimeField(auto_now_add=True, blank = True, null= True)
     updated = models.DateTimeField(auto_now=True, blank = True, null= True)
     expiry_date = models.DateField(null=True, blank=True)
+    allergens_text = models.CharField(max_length=255, blank=True, help_text="Enter allergens separated by commas")
 
     class Meta:
         ordering = ('name',)

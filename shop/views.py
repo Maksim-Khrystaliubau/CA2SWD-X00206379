@@ -13,6 +13,11 @@ def chicken_category(request):
     # Other logic for pagination, context, etc.
     return render(request, 'shop/chicken_category.html', {'chicken_products': chicken_products})
 
+def sides_category(request):
+    sides_products = Product.objects.filter(category__name='Sides')
+    # Other logic for pagination, context, etc.
+    return render(request, 'shop/sides_category.html', {'sides_products': sides_products})
+
 def drinks_category(request):
     drinks = Product.objects.filter(category__name='Drinks')
     paginator = Paginator(drinks, 12)  # Adjust the number of items per page as needed

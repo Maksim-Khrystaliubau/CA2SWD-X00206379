@@ -2,11 +2,10 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block metadescription %}
-Sign up to get a new account with us. The perfect
-cushion store has a variety of stunning and comfy cushions.
+Sign up to get a new account with us. The perfect pizzeria offers a variety of delicious pizzas and delightful dining experiences.
 {% endblock %}
 {% block title %}
-Create a New Account - Perfect Cushion Store
+Create a New Account - Perfect Pizzeria
 {% endblock %}
 {% block content %}
 <div>
@@ -17,7 +16,7 @@ Create a New Account - Perfect Cushion Store
         <br />
         <div class="col-9 col-sm-9 col-md-6 col-lg-5 mx-auto bg-light">
             <br />
-            <p>Enter the following information to create a new account.</p>
+            <p>Enter the following information to create a new account for ordering our delicious pizzas.</p>
             <form method="post">
                 <p>{{ form | crispy }}</p>
                 {% csrf_token %}

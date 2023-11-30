@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from vouchers.models import Voucher
 from shop.models import Product
+from decimal import Decimal
 
 class Order(models.Model):
     token = models.CharField(max_length=250, blank=True)
@@ -43,11 +44,12 @@ class Order(models.Model):
         return str(self.id)
 
     def calculate_total(self):
-        # Calculate the total based on OrderItem instances associated with this order
+    # Calculate the total based on OrderItem instances associated with this order
         order_items = self.orderitem_set.all()
         total = sum(item.sub_total() for item in order_items)
         # Apply discount and update the total
-        total -= total * (self.discount / 100)
+        discount_amount = Decimal(self.discount) / 100 * total
+        total -= discount_amount
         self.total = total
         self.save()
 

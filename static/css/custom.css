@@ -4,11 +4,11 @@
   letter-spacing: 0.1em;
   font-size: 14px;
   text-transform: uppercase;
-  color: #6c757d; /* Pastel gray */
+  color: rgb(1, 5, 8); /* Pastel gray */
 }
 .product-description {
-  font-size: 18px; /* Adjust the font size as needed */
-  color: #fff; /* White color */
+  font-size: 18px; 
+  color: #fff; /
 }
 
 /* Footer */

@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
-from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
 from django.contrib.auth.models import Group
+from django.shortcuts import render, redirect
+from django.views.generic.edit import CreateView
+
 from .forms import CustomUserCreationForm
 from .models import CustomUser
 
@@ -20,4 +20,4 @@ class SignUpView(CreateView):
             customer_group.user_set.add(signup_user)
             return redirect('login')
         else:
-            return render(request, self.template_name, {'form' : form })
+            return render(request, self.template_name, {'form': form})

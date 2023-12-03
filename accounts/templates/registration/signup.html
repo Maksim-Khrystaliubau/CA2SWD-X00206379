@@ -5,17 +5,17 @@
 Sign up to get a new account with us. The perfect pizzeria offers a variety of delicious pizzas and delightful dining experiences.
 {% endblock %}
 {% block title %}
-Create a New Account - Perfect Pizzeria
+Create a New Account - Scooby`s Pizza
 {% endblock %}
 {% block content %}
 <div>
     {% if not form.is_valid %}
     <div class="mx-auto">
-        <br />
+        <br/>
         <h1 class="my_title text-center">Create a new account</h1>
-        <br />
-        <div class="col-9 col-sm-9 col-md-6 col-lg-5 mx-auto bg-light">
-            <br />
+        <br/>
+        <div class="col-9 col-sm-9 col-md-6 col-lg-5 m-auto bg-transparent">
+            <br/>
             <p>Enter the following information to create a new account for ordering our delicious pizzas.</p>
             <form method="post">
                 <p>{{ form | crispy }}</p>
@@ -24,10 +24,10 @@ Create a New Account - Perfect Pizzeria
                     Register Account
                 </button>
             </form>
-            <br />
+            <br/>
         </div>
     </div>
     {% endif %}
 </div>
-<br />
+<br/>
 {% endblock %}

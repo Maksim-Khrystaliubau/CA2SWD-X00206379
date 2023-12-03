@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-Order Details - Perfect Cushion Store
+Order Details - Scooby`s Pizza
 {% endblock %}
 {% block content %}
 <div>
@@ -9,48 +9,47 @@ Order Details - Perfect Cushion Store
         <br>
         <h1 class="text-center my_title">Order Details</h1>
         <br>
-        <table class="table table-bordered">
+        <table class="table table-bordered bg-transparent">
             <tr>
-                <td class="text-left" colspan="2">
+                <td class="text-left bg-transparent" colspan="2">
                     <b>Order: </b>#{{ order.id }}<br>
                     <b>Date: </b>{{ order.created|date:"d M Y" }}<br>
                     <b>Order Total: </b>€{{ order.total }}<br>
                     <b>Order Status: </b><i class="fas fa-check"></i>
                 </td>
-                <td class="text-left" colspan="2">
+                <td class="text-left bg-transparent" colspan="2">
                     <b>Billing Address: </b><br>
                     {{ order.billingName }}<br>
-                    {{ order.billingAddress1 }}<br><td><a href="{% url 'order:order_detail' order.pk %}">View order</a></td>
-
+                    {{ order.billingAddress1 }}<br>
                     {{ order.billingCity }}<br>
                     {{ order.billingPostcode }}<br>
                     {{ order.billingCountry }}<br>
                 </td>
             </tr>
-            <tr>
-                <td><b>Product Description</b></td>
-                <td><b>Qty</b></td>
-                <td><b>Unit Price</b></td>
-                <td><b>Sub-Total</b></td>
+            <tr class="bg-transparent">
+                <td class="bg-transparent"><b>Product Description</b></td>
+                <td class="bg-transparent"><b>Qty</b></td>
+                <td class="bg-transparent"><b>Unit Price</b></td>
+                <td class="bg-transparent"><b>Sub-Total</b></td>
             </tr>
             {% for item in order_items %}
-            <tr>
-                <td>{{ item.product }}</td>
-                <td>{{ item.quantity }}</td>
-                <td>€{{ item.price }}</td>
-                <td>€{{ item.sub_total }}</td>
+            <tr class="bg-transparent">
+                <td class="bg-transparent">{{ item.product }}</td>
+                <td class="bg-transparent">{{ item.quantity }}</td>
+                <td class="bg-transparent">€{{ item.price }}</td>
+                <td class="bg-transparent">€{{ item.sub_total }}</td>
             </tr>
             {% endfor %}
-            <tr>
-                <td class="text-right" colspan="3"><b>Total</b></td>
-                <td>€{{ order.total }}</td>
+            <tr class="bg-transparent">
+                <td class="text-right bg-transparent" colspan="3"><b>Total</b></td>
+                <td class="bg-transparent">€{{ order.total }}</td>
             </tr>
-            <tr>
-                <td class="text-right" colspan="3"><b>Total Paid</b></td>
-                <td>€{{ order.total }}</td>
+            <tr class="bg-transparent">
+                <td class="text-right bg-transparent" colspan="3"><b>Total Paid</b></td>
+                <td class="bg-transparent">€{{ order.total }}</td>
             </tr>
-            <tr>
-                <td class="text-left" colspan="2">
+            <tr class="bg-transparent">
+                <td class="text-left bg-transparent" colspan="2">
                     <b>Shipping Address: </b><br>
                     {{ order.shippingName }}<br>
                     {{ order.shippingAddress1 }}<br>
@@ -58,7 +57,7 @@ Order Details - Perfect Cushion Store
                     {{ order.shippingPostcode }}<br>
                     {{ order.shippingCountry }}<br>
                 </td>
-                <td class="text-left" colspan="2">
+                <td class="text-left bg-transparent" colspan="2">
                     <b>Payment Details: </b><br>
                     The order #{{ order.id }} has been paid successfully via
                     Stripe.

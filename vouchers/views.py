@@ -22,4 +22,4 @@ def voucher_apply(request):
             request.session['voucher_id'] = None
 
     # Continue with the rest of your view logic if needed
-    return redirect('cart:cart_detail') 
+    return redirect('cart:cart_detail')

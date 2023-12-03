@@ -1,13 +1,16 @@
-from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import View
+
 from .models import Order, OrderItem
+
 
 def thanks(request, order_id):
     if order_id:
         customer_order = get_object_or_404(Order, id=order_id)
         return render(request, 'thanks.html', {'customer_order': customer_order})
     return render(request, 'thanks.html')  # Handle the case where order_id is not provided
+
 
 class OrderHistory(LoginRequiredMixin, View):
     def get(self, request):
@@ -21,6 +24,7 @@ class OrderHistory(LoginRequiredMixin, View):
 
             return render(request, 'order/orders_list.html', {'order_details': order_details})
         return render(request, 'order/orders_list.html')  # Handle the case where the user is not authenticated
+
 
 class OrderDetail(LoginRequiredMixin, View):
     def get(self, request, order_id):

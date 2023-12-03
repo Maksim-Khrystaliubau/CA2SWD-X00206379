@@ -167,8 +167,7 @@ STRIPE_SECRET_KEY = 'sk_test_51ODrQeKRK9eJu3jKFFEFWl1UQ8tpAvBtuGVySGYjiKTgkoCpqA
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51ODrQeKRK9eJu3jKdsTShUXpPNkHIhkLBQJHKfVpiDK5aFNRuy8BAANbSxMdrm3CXFcGas8qGuOpLBh9hBeoC7EV003Monjl3k'
 
 
-LOGIN_REDIRECT_URL = 'shop:all_products'
-LOGOUT_REDIRECT_URL = 'shop:all_products'
+LOGIN_REDIRECT_URL = 'shop:index'
+LOGOUT_REDIRECT_URL = 'shop:index'
 
-
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

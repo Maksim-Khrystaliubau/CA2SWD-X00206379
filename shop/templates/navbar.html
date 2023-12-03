@@ -1,50 +1,55 @@
-
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <br><br>
-    <div class="container-fluid">
-        <br>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            ariacontrols="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#"
-                        id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" ariaexpanded="false">
-                        Shop
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item"
-                                href="{% url 'shop:all_products' %}">All
-                                Products</a></li>
-                        {% for cat in links %}
-                        <li><a class="dropdown-item"
-                                href="{{cat.get_absolute_url}}">{{cat.name}}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Your Cart</a>
-                </li>
-                {% if item_count > 0 %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'cart:cart_detail' %}"><i
-                            class="fas fa-shopping-cart">({{item_count}})</i></a>
-                </li>
-                {% endif %}
-            </ul>
-            <form class="d-flex" action="{% url 'search_app:searchResult' %} "
-                method="get">
-                <input class="form-control me-2" type="search"
-                    placeholder="Search" aria-label="Search" name="q">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                <br>
-            </form>
+{% load static %}
+<div class="container">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="logo" href="{% url 'shop:index' %}"><img
+                    src="{% static 'images/logo.png' %}"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'shop:index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'shop:contact' %}">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown"> <!-- Wrap "Shop" link and dropdown menu in an <li> element -->
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'shop:shop_menu' %}">All Products</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            {% for cat in links %}
+                            <li><a class="dropdown-item" href="{{cat.get_absolute_url}}">{{cat.name}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'order:order_history' %}">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <form class="d-flex" action="{% url 'search_app:searchResult' %} " method="get">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>

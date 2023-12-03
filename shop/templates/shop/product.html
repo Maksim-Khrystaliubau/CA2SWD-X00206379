@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block title %}
-{{ product.name }} - Perfect Pizza Store
+{{ product.name }} - Scooby`s Pizza
 {% endblock %}
 
 {% block head %}
@@ -26,7 +26,7 @@
 {% block content %}
 <div class="container my_prod_row_class">
     <div class="mx-auto">
-        <p><a href="{% url 'shop:all_products' %}">Home</a> | <a
+        <p><a href="{% url 'shop:shop_menu' %}">Home</a> | <a
                 href="{{ product.category.get_url }}">{{ product.category }}</a>
             | {{ product.name }}</p>
     </div>
@@ -36,11 +36,11 @@
         <div class="row">
             <div class="col-12 col-md-6 mb-4">
                 <div class="text-center image-container"
-                    style="height: 300px; overflow: hidden;">
+                     style="height: 300px; overflow: hidden;">
                     <img class="my_image img-fluid"
-                        style="height: 100%; width: 100%; object-fit: cover;"
-                        src="{{ product.image.url }}" alt="{{ product.name }}"
-                        onclick="zoomImage(this)">
+                         style="height: 100%; width: 100%; object-fit: cover;"
+                         src="{{ product.image.url }}" alt="{{ product.name }}"
+                         onclick="zoomImage(this)">
                 </div>
             </div>
             <div class="col-12 col-md-6">
@@ -55,7 +55,7 @@
                         <p class="text-justify my_prod_text"><b>Out of Stock</b></p>
                         {% else %}
                         <a class="btn btn-secondary"
-                            href="{% url 'cart:add_cart' product.id %}">Add to
+                           href="{% url 'cart:add_cart' product.id %}">Add to
                             Cart</a>
                         {% endif %}
                     </div>

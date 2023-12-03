@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Scooby`s Pizza
+{% endblock %}
+
+{% block metadescription %}
+Welcome to Scooby`s Pizza
+{% endblock %}
+
+{% block content %}
+<section class="banner">
+    <div class="container">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="b-content">
+                            <h1>The best pizza in Tallaght</h1>
+                            <p>Tallaght's premier pizzeria delivers a mouthwatering experience with its thin, crispy
+                                crust adorned with locally-sourced ingredients. The symphony of flavors, from juicy
+                                tomatoes to savory cheeses, makes each bite satisfying and unforgettable. Whether dining
+                                in or taking away, this pizza has become a local favorite, epitomizing tasteful
+                                indulgence in Tallaght.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <img src="{% static 'images/file-bXY7tFuoER4SJ4aSCnT0GZpn.png' %}" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="b-content">
+                            <h1>The Greek Fusion</h1>
+                            <p>Immerse your taste buds in the flavors of the Mediterranean with a Greek-inspired pizza.
+                                Feta cheese, Kalamata olives, sun-dried tomatoes, and a sprinkle of oregano adorn a
+                                golden-brown crust, creating a harmonious blend of savory and tangy notes. This pizza is
+                                a celebration of Mediterranean cuisine, transporting you to the azure shores and
+                                sun-drenched landscapes that inspire its vibrant flavors.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <img src="{% static 'images/file-u9MYJH5fd9YhEIf36ybTUDFD.png' %}" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="b-content">
+                            <h1>Mexican Spicy Fiesta</h1>
+                            <p>Spice up your pizza experience with a Mexican-inspired creation that tantalizes the taste
+                                buds. A zesty combination of chorizo, jalapeños, red onions, and fresh cilantro rests
+                                atop a thin, crunchy crust, creating a fiesta of flavors. Each slice is a bold and
+                                vibrant fusion of Mexican ingredients, delivering a mouthwatering experience that brings
+                                the heat and excitement of Mexican cuisine to your plate.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <img src="{% static 'images/file-wWsuPYS7kGvqDQwOsrfYBy8H.png' %}" class="img-fluid">
+                    </div>
+                </div>
+                >
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="b-content">
+                            <h1>Napoli's Classic Margherita</h1>
+                            <p>Embark on a culinary journey to Napoli, where tradition and taste converge in a classic
+                                Margherita pizza. The simplicity of fresh tomatoes, buffalo mozzarella, basil, and a
+                                drizzle of olive oil on a perfectly blistered crust captures the essence of Neapolitan
+                                pizza-making. Each bite is a homage to the rich history and timeless flavors that define
+                                this beloved Italian creation.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <img src="{% static 'images/file-YEnx1uWsKaZrzilLFpEpto0m.png' %}" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Owl js -->
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/owl.carousel.js"></script>
+<!-- Custom Javascript -->
+<script type="text/javascript" src="static/js/index.js"></script>
+{% endblock %}

@@ -1,1 +1,237 @@
-[{"model": "shop.category", "pk": "0be2f2c3-92c9-434c-a53b-429dbfc096ff", "fields": {"name": "Pizzas", "description": "", "image": ""}}, {"model": "shop.category", "pk": "0c211c56-ed6b-4c5e-8469-ce8a8468be77", "fields": {"name": "Drinks", "description": "", "image": ""}}, {"model": "shop.category", "pk": "859c5d2e-cb4c-4eb4-a87f-87f6e5f55848", "fields": {"name": "Chicken", "description": "", "image": ""}}, {"model": "shop.product", "pk": "191d291d-6afe-475d-a5ed-da782f7a5318", "fields": {"name": "Tomato Bacon Leaves Mushrooms Cheese", "description": "Savour the delightful medley of flavours with our Tomato Bacon Leaves Mushrooms Cheese pizza. Experience the juicy burst of tomatoes, the smoky goodness of bacon, the earthy essence of mushrooms, all crowned with a generous layer of melted cheese. This pizza is a harmonious blend of savoury and satisfying elements, ensuring a memorable and delicious dining experience.", "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff", "price": "14.00", "image": "product/pexels-photo-7813572.jpeg", "stock": 100, "available": true, "created": "2023-11-19T16:12:26.326Z", "updated": "2023-11-19T16:27:11.225Z", "expiry_date": null}}, {"model": "shop.product", "pk": "5ca63bed-413e-4fce-a365-e5323d90e0f2", "fields": {"name": "Special Pizza Cheese and Tomatoes", "description": "Indulge in the exquisite flavour's of our Special Pizza, featuring a tantalizing blend of rich and gooey cheese paired with the freshness of ripe tomatoes. Each bite is a symphony of savory and sweet, making this pizza a truly special treat for your taste buds. Experience the perfect harmony of ingredients crafted to delight your senses.", "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff", "price": "12.50", "image": "product/saahil-khatkhate-kfDsMDyX1K0-unsplash.jpg", "stock": 1000, "available": true, "created": "2023-11-19T16:08:21.029Z", "updated": "2023-11-19T16:08:21.030Z", "expiry_date": null}}, {"model": "shop.product", "pk": "5eb99fd7-72a3-471f-b60d-4862b77af88e", "fields": {"name": "Chicken Tenders", "description": "Treat yourself to the juicy perfection of our Succulent Chicken Tenders. Each bite is a delightful blend of tender chicken encased in a golden, crispy coating. Versatile and delicious, these chicken tenders make for a satisfying meal or a crowd-pleasing snack.", "category": "859c5d2e-cb4c-4eb4-a87f-87f6e5f55848", "price": "8.99", "image": "product/israel-albornoz-T1IKasSmrEg-unsplash.jpg", "stock": 20, "available": true, "created": "2023-11-19T17:45:43.078Z", "updated": "2023-11-21T13:29:43.539Z", "expiry_date": "2023-11-30"}}, {"model": "shop.product", "pk": "73c62555-7f09-4802-a726-99a48b20b2ac", "fields": {"name": "Chili Bites", "description": "Savour the bold and fiery kick of our Spicy Chili Bites! These tantalizing bites are crafted to perfection, combining a crunchy exterior with a burst of spicy flavour that will ignite your taste buds. Ideal for those who crave a thrilling snack experience, our Spicy Chili Bites are the ultimate choice for spice enthusiasts.", "category": "859c5d2e-cb4c-4eb4-a87f-87f6e5f55848", "price": "6.50", "image": "product/chicken2.jpg", "stock": 50, "available": true, "created": "2023-11-19T17:52:10.437Z", "updated": "2023-11-19T18:13:19.545Z", "expiry_date": null}}, {"model": "shop.product", "pk": "8d7e5a1b-d0d1-4e3d-862f-948c366e03df", "fields": {"name": "Pizza with Green Leaves and Red Sauce", "description": "Indulge your senses in a culinary symphony with our exquisite Pizza adorned with vibrant green leaves and luscious red sauce. Picture a perfect harmony of flavour's and textures, where the crispness of our golden-brown crust meets the velvety richness of our signature red sauce.\r\n\r\nAs you take your first bite, the tantalizing combination of fresh, verdant leaves adds a burst of freshness, elevating each slice to a gourmet delight. The green leaves not only bring a visual feast to your plate but also contribute a delightful crunch and a burst of earthy goodness.\r\n\r\nThe jewel-toned red sauce, made from the finest tomatoes and a secret blend of herbs and spices, envelops the pizza in a symphony of savoury perfection. Its robust flavour profile provides a savoury counterpoint to the crispness of the crust, creating a taste sensation that will leave you craving more.", "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff", "price": "14.99", "image": "product/abhishek-hajare-0UcHlaN-hgQ-unsplash.jpg", "stock": 100, "available": true, "created": "2023-11-19T15:28:01.703Z", "updated": "2023-11-19T15:36:50.816Z", "expiry_date": null}}, {"model": "shop.product", "pk": "98601670-3380-4554-9d31-ac6123649049", "fields": {"name": "Water Bottle", "description": "Chilled Water", "category": "0c211c56-ed6b-4c5e-8469-ce8a8468be77", "price": "1.50", "image": "product/water2.jpg", "stock": 1000, "available": true, "created": "2023-11-19T18:08:48.485Z", "updated": "2023-11-19T18:08:48.485Z", "expiry_date": null}}, {"model": "shop.product", "pk": "9d7e626b-a2b1-4d24-a407-3e71218759b2", "fields": {"name": "Jalapeno Cheese Ham Salami", "description": "Experience a spicy symphony with our Jalapeño Cheese Ham Salami pizza. Delight in the perfect balance of zesty jalapeños, creamy cheese, savoury ham, and bold salami, creating a taste sensation that packs a flavourful punch with every bite. Spice up your pizza adventure!", "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff", "price": "14.50", "image": "product/abhishek-hajare-pvpugAWd6_g-unsplash.jpg", "stock": 100, "available": true, "created": "2023-11-19T15:42:38.573Z", "updated": "2023-11-19T15:42:38.574Z", "expiry_date": null}}, {"model": "shop.product", "pk": "a621e27c-c888-48a1-a89e-a2c758bce85c", "fields": {"name": "Sprite Can", "description": "Sprite Original Can.", "category": "0c211c56-ed6b-4c5e-8469-ce8a8468be77", "price": "1.80", "image": "product/SpriteCan.jpg", "stock": 1000, "available": true, "created": "2023-11-19T18:06:28.383Z", "updated": "2023-11-19T18:06:28.383Z", "expiry_date": null}}, {"model": "shop.product", "pk": "be78d44f-e2be-4870-8267-626a2514c332", "fields": {"name": "Pineapple Green Leaves Chicken Onions", "description": "Savour the tropical delight of our Pineapple Green Leaves Chicken Onions pizza, where succulent chicken meets the sweetness of pineapple, all topped with a vibrant medley of green leaves and savory onions. A harmonious fusion that transports your taste buds to a paradise of flavors.", "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff", "price": "13.99", "image": "product/chad-montano-MqT0asuoIcU-unsplash.jpg", "stock": 100, "available": true, "created": "2023-11-19T15:39:05.782Z", "updated": "2023-11-19T15:39:05.782Z", "expiry_date": null}}, {"model": "shop.product", "pk": "c636f1f2-dead-4043-9831-7a4afb5246b4", "fields": {"name": "Chicken Wings", "description": "Indulge in the irresistible goodness of our succulent chicken wings. Crispy, flavourful, and perfectly seasoned, these wings are a must-have for any occasion. Whether you're hosting a party or craving a tasty snack, our chicken wings deliver a mouth-watering experience. Spice up your moments with these delectable treats!", "category": "859c5d2e-cb4c-4eb4-a87f-87f6e5f55848", "price": "7.50", "image": "product/wings.jpg", "stock": 20, "available": true, "created": "2023-11-19T17:54:31.153Z", "updated": "2023-11-19T18:12:53.265Z", "expiry_date": null}}, {"model": "shop.product", "pk": "d8009ac4-935c-4a66-a993-2a2f04fe33d3", "fields": {"name": "Fanta Can", "description": "Fanta Original Can.", "category": "0c211c56-ed6b-4c5e-8469-ce8a8468be77", "price": "1.80", "image": "product/fantaCan.jpg", "stock": 1000, "available": true, "created": "2023-11-19T18:05:34.495Z", "updated": "2023-11-19T18:05:34.495Z", "expiry_date": null}}, {"model": "shop.product", "pk": "ed2dd69e-4161-4746-8131-76d73decdde7", "fields": {"name": "Coca Cola", "description": "Coca Cola Original Can.", "category": "0c211c56-ed6b-4c5e-8469-ce8a8468be77", "price": "1.80", "image": "product/coke.jpg", "stock": 100, "available": true, "created": "2023-11-19T18:04:20.006Z", "updated": "2023-11-19T18:06:56.921Z", "expiry_date": null}}, {"model": "shop.product", "pk": "f2dc3768-e360-4dd7-bd3b-cfcb2f61e2f3", "fields": {"name": "Ham Peperoni Cheese Pizza Deal", "description": "Savor the Perfect Blend: Ham, Cheese, and Pepperoni Pizza\r\n\r\nIndulge your taste buds in a symphony of flavour's with our signature Ham, Cheese, and Pepperoni Pizza. This classic combination brings together savoury ham, gooey melted cheese, and zesty pepperoni on a crisp, golden crust. Each bite is a delicious harmony of smoky, salty, and spicy notes, creating a pizza experience that's nothing short of perfection. Whether you're sharing a meal with friends or enjoying a solo pizza night, our Ham, Cheese, and Pepperoni Pizza is a timeless favourite that never fails to satisfy cravings. Order now and treat yourself to a slice of pizza paradise!", "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff", "price": "12.99", "image": "product/fernando-andrade-_P76trHTWDE-unsplash.jpg", "stock": 100, "available": true, "created": "2023-11-19T15:00:16.568Z", "updated": "2023-11-19T17:31:53.759Z", "expiry_date": null}}]
+[
+  {
+    "model": "shop.category",
+    "pk": "0be2f2c3-92c9-434c-a53b-429dbfc096ff",
+    "fields": {
+      "name": "Pizzas",
+      "description": "",
+      "image": ""
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": "0c211c56-ed6b-4c5e-8469-ce8a8468be77",
+    "fields": {
+      "name": "Drinks",
+      "description": "",
+      "image": ""
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": "859c5d2e-cb4c-4eb4-a87f-87f6e5f55848",
+    "fields": {
+      "name": "Chicken",
+      "description": "",
+      "image": ""
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "191d291d-6afe-475d-a5ed-da782f7a5318",
+    "fields": {
+      "name": "Tomato Bacon Leaves Mushrooms Cheese",
+      "description": "Savour the delightful medley of flavours with our Tomato Bacon Leaves Mushrooms Cheese pizza. Experience the juicy burst of tomatoes, the smoky goodness of bacon, the earthy essence of mushrooms, all crowned with a generous layer of melted cheese. This pizza is a harmonious blend of savoury and satisfying elements, ensuring a memorable and delicious dining experience.",
+      "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff",
+      "price": "14.00",
+      "image": "product/Pizza1.png",
+      "stock": 100,
+      "available": true,
+      "created": "2023-11-19T16:12:26.326Z",
+      "updated": "2023-11-19T16:27:11.225Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "5ca63bed-413e-4fce-a365-e5323d90e0f2",
+    "fields": {
+      "name": "Special Pizza Cheese and Tomatoes",
+      "description": "Indulge in the exquisite flavour's of our Special Pizza, featuring a tantalizing blend of rich and gooey cheese paired with the freshness of ripe tomatoes. Each bite is a symphony of savory and sweet, making this pizza a truly special treat for your taste buds. Experience the perfect harmony of ingredients crafted to delight your senses.",
+      "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff",
+      "price": "12.50",
+      "image": "product/Pizza2.png",
+      "stock": 1000,
+      "available": true,
+      "created": "2023-11-19T16:08:21.029Z",
+      "updated": "2023-11-19T16:08:21.030Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "5eb99fd7-72a3-471f-b60d-4862b77af88e",
+    "fields": {
+      "name": "Chicken Tenders",
+      "description": "Treat yourself to the juicy perfection of our Succulent Chicken Tenders. Each bite is a delightful blend of tender chicken encased in a golden, crispy coating. Versatile and delicious, these chicken tenders make for a satisfying meal or a crowd-pleasing snack.",
+      "category": "859c5d2e-cb4c-4eb4-a87f-87f6e5f55848",
+      "price": "8.99",
+      "image": "product/ChickenTenders.png",
+      "stock": 20,
+      "available": true,
+      "created": "2023-11-19T17:45:43.078Z",
+      "updated": "2023-11-21T13:29:43.539Z",
+      "expiry_date": "2023-11-30"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "73c62555-7f09-4802-a726-99a48b20b2ac",
+    "fields": {
+      "name": "Chili Bites",
+      "description": "Savour the bold and fiery kick of our Spicy Chili Bites! These tantalizing bites are crafted to perfection, combining a crunchy exterior with a burst of spicy flavour that will ignite your taste buds. Ideal for those who crave a thrilling snack experience, our Spicy Chili Bites are the ultimate choice for spice enthusiasts.",
+      "category": "859c5d2e-cb4c-4eb4-a87f-87f6e5f55848",
+      "price": "6.50",
+      "image": "product/ChiliBites.png",
+      "stock": 50,
+      "available": true,
+      "created": "2023-11-19T17:52:10.437Z",
+      "updated": "2023-11-19T18:13:19.545Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "8d7e5a1b-d0d1-4e3d-862f-948c366e03df",
+    "fields": {
+      "name": "Pizza with Green Leaves and Red Sauce",
+      "description": "Indulge your senses in a culinary symphony with our exquisite Pizza adorned with vibrant green leaves and luscious red sauce. Picture a perfect harmony of flavour's and textures, where the crispness of our golden-brown crust meets the velvety richness of our signature red sauce.\r\n\r\nAs you take your first bite, the tantalizing combination of fresh, verdant leaves adds a burst of freshness, elevating each slice to a gourmet delight. The green leaves not only bring a visual feast to your plate but also contribute a delightful crunch and a burst of earthy goodness.\r\n\r\nThe jewel-toned red sauce, made from the finest tomatoes and a secret blend of herbs and spices, envelops the pizza in a symphony of savoury perfection. Its robust flavour profile provides a savoury counterpoint to the crispness of the crust, creating a taste sensation that will leave you craving more.",
+      "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff",
+      "price": "14.99",
+      "image": "product/Pizza3.png",
+      "stock": 100,
+      "available": true,
+      "created": "2023-11-19T15:28:01.703Z",
+      "updated": "2023-11-19T15:36:50.816Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "98601670-3380-4554-9d31-ac6123649049",
+    "fields": {
+      "name": "Water Bottle",
+      "description": "Chilled Water",
+      "category": "0c211c56-ed6b-4c5e-8469-ce8a8468be77",
+      "price": "1.50",
+      "image": "product/Water.png",
+      "stock": 1000,
+      "available": true,
+      "created": "2023-11-19T18:08:48.485Z",
+      "updated": "2023-11-19T18:08:48.485Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "9d7e626b-a2b1-4d24-a407-3e71218759b2",
+    "fields": {
+      "name": "Jalapeno Cheese Ham Salami",
+      "description": "Experience a spicy symphony with our JalapeÃ±o Cheese Ham Salami pizza. Delight in the perfect balance of zesty jalapeÃ±os, creamy cheese, savoury ham, and bold salami, creating a taste sensation that packs a flavourful punch with every bite. Spice up your pizza adventure!",
+      "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff",
+      "price": "14.50",
+      "image": "product/Pizza4.png",
+      "stock": 100,
+      "available": true,
+      "created": "2023-11-19T15:42:38.573Z",
+      "updated": "2023-11-19T15:42:38.574Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "a621e27c-c888-48a1-a89e-a2c758bce85c",
+    "fields": {
+      "name": "Sprite Can",
+      "description": "Sprite Original Can.",
+      "category": "0c211c56-ed6b-4c5e-8469-ce8a8468be77",
+      "price": "1.80",
+      "image": "product/Sprite.png",
+      "stock": 1000,
+      "available": true,
+      "created": "2023-11-19T18:06:28.383Z",
+      "updated": "2023-11-19T18:06:28.383Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "be78d44f-e2be-4870-8267-626a2514c332",
+    "fields": {
+      "name": "Pineapple Green Leaves Chicken Onions",
+      "description": "Savour the tropical delight of our Pineapple Green Leaves Chicken Onions pizza, where succulent chicken meets the sweetness of pineapple, all topped with a vibrant medley of green leaves and savory onions. A harmonious fusion that transports your taste buds to a paradise of flavors.",
+      "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff",
+      "price": "13.99",
+      "image": "product/Pizza5.png",
+      "stock": 100,
+      "available": true,
+      "created": "2023-11-19T15:39:05.782Z",
+      "updated": "2023-11-19T15:39:05.782Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "c636f1f2-dead-4043-9831-7a4afb5246b4",
+    "fields": {
+      "name": "Chicken Wings",
+      "description": "Indulge in the irresistible goodness of our succulent chicken wings. Crispy, flavourful, and perfectly seasoned, these wings are a must-have for any occasion. Whether you're hosting a party or craving a tasty snack, our chicken wings deliver a mouth-watering experience. Spice up your moments with these delectable treats!",
+      "category": "859c5d2e-cb4c-4eb4-a87f-87f6e5f55848",
+      "price": "7.50",
+      "image": "product/ChickenWings.png",
+      "stock": 20,
+      "available": true,
+      "created": "2023-11-19T17:54:31.153Z",
+      "updated": "2023-11-19T18:12:53.265Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "d8009ac4-935c-4a66-a993-2a2f04fe33d3",
+    "fields": {
+      "name": "Fanta Can",
+      "description": "Fanta Original Can.",
+      "category": "0c211c56-ed6b-4c5e-8469-ce8a8468be77",
+      "price": "1.80",
+      "image": "product/Fanta.png",
+      "stock": 1000,
+      "available": true,
+      "created": "2023-11-19T18:05:34.495Z",
+      "updated": "2023-11-19T18:05:34.495Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "ed2dd69e-4161-4746-8131-76d73decdde7",
+    "fields": {
+      "name": "Coca Cola",
+      "description": "Coca Cola Original Can.",
+      "category": "0c211c56-ed6b-4c5e-8469-ce8a8468be77",
+      "price": "1.80",
+      "image": "product/CocaCola.png",
+      "stock": 100,
+      "available": true,
+      "created": "2023-11-19T18:04:20.006Z",
+      "updated": "2023-11-19T18:06:56.921Z",
+      "expiry_date": null
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "f2dc3768-e360-4dd7-bd3b-cfcb2f61e2f3",
+    "fields": {
+      "name": "Ham Peperoni Cheese Pizza Deal",
+      "description": "Savor the Perfect Blend: Ham, Cheese, and Pepperoni Pizza\r\n\r\nIndulge your taste buds in a symphony of flavour's with our signature Ham, Cheese, and Pepperoni Pizza. This classic combination brings together savoury ham, gooey melted cheese, and zesty pepperoni on a crisp, golden crust. Each bite is a delicious harmony of smoky, salty, and spicy notes, creating a pizza experience that's nothing short of perfection. Whether you're sharing a meal with friends or enjoying a solo pizza night, our Ham, Cheese, and Pepperoni Pizza is a timeless favourite that never fails to satisfy cravings. Order now and treat yourself to a slice of pizza paradise!",
+      "category": "0be2f2c3-92c9-434c-a53b-429dbfc096ff",
+      "price": "12.99",
+      "image": "product/Pizza6.png",
+      "stock": 100,
+      "available": true,
+      "created": "2023-11-19T15:00:16.568Z",
+      "updated": "2023-11-19T17:31:53.759Z",
+      "expiry_date": null
+    }
+  }
+]

@@ -1,22 +1,31 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Category, Product
 from django.core.paginator import Paginator, EmptyPage, InvalidPage
-from .forms import CommentForm
-from django.views import View
+from django.shortcuts import render, get_object_or_404
+
+from .models import Category, Product
+
+
+def index_page(request):
+    return render(request, 'index.html', {})
+
+
+def contact_page(request):
+    return render(request, 'contact.html', {})
+
 
 def pizzas_category(request):
-    # Add logic to retrieve and display pizza products
-    return render(request, 'shop/pizzas_category.html', {})
+    pizza_products = Product.objects.filter(category__name='Chicken')
+    return render(request, 'shop/pizzas_category.html', {'pizza_products': pizza_products})
+
 
 def chicken_category(request):
     chicken_products = Product.objects.filter(category__name='Chicken')
-    # Other logic for pagination, context, etc.
     return render(request, 'shop/chicken_category.html', {'chicken_products': chicken_products})
+
 
 def sides_category(request):
     sides_products = Product.objects.filter(category__name='Sides')
-    # Other logic for pagination, context, etc.
     return render(request, 'shop/sides_category.html', {'sides_products': sides_products})
+
 
 def drinks_category(request):
     drinks = Product.objects.filter(category__name='Drinks')
@@ -44,7 +53,7 @@ def prod_list(request, category_id=None):
             category = get_object_or_404(Category, name="Pizzas")
         else:
             category = get_object_or_404(Category, id=category_id)
-        
+
         # Filter products based on the selected category
         products = Product.objects.filter(category=category, available=True)
 
@@ -57,12 +66,11 @@ def prod_list(request, category_id=None):
     try:
         products = paginator.page(page)
     except (EmptyPage, InvalidPage):
-     products = paginator.page(paginator.num_pages)
+        products = paginator.page(paginator.num_pages)
 
     return render(request, 'shop/category.html', {'category': category, 'prods': products})
+
 
 def product_detail(request, category_id, product_id):
     product = get_object_or_404(Product, category_id=category_id, id=product_id)
     return render(request, 'shop/product.html', {'product': product})
-
-

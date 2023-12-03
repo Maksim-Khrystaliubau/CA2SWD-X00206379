@@ -1,5 +1,6 @@
-from django.db import migrations, models
 import django.db.models.deletion
+from django.db import migrations, models
+
 
 def fix_foreign_keys(apps, schema_editor):
     CartItem = apps.get_model('cart', 'CartItem')  # Replace 'cart' with the actual app name
@@ -8,6 +9,7 @@ def fix_foreign_keys(apps, schema_editor):
     # Update the product field with a valid value (replace 1 with a valid product id)
     valid_product = Product.objects.first()  # Replace this with a valid product query
     CartItem.objects.filter(product__name='Black Urban').update(product=valid_product)
+
 
 class Migration(migrations.Migration):
     initial = True
@@ -68,7 +70,7 @@ class Migration(migrations.Migration):
                 "db_table": "CartItem",
             },
         ),
-        
+
         # Add the RunPython operation here
         migrations.RunPython(fix_foreign_keys),
     ]

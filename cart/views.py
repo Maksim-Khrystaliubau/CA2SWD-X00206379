@@ -1,14 +1,17 @@
-from django.shortcuts import redirect, render, get_object_or_404
-from shop.models import Product
-from .models import Cart, CartItem
+from decimal import Decimal
+
+import stripe
+from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
-from django.conf import settings
-import stripe
+from django.shortcuts import redirect, render, get_object_or_404
+
 from order.models import Order, OrderItem
-from vouchers.models import Voucher
+from shop.models import Product
 from vouchers.forms import VoucherApplyForm
-from decimal import Decimal
+from vouchers.models import Voucher
+from .models import Cart, CartItem
+
 
 def _cart_id(request):
     cart_id = request.session.session_key
@@ -16,6 +19,7 @@ def _cart_id(request):
         request.session.save()
         cart_id = request.session.session_key
     return cart_id
+
 
 def add_cart(request, product_id):
     product = Product.objects.get(id=product_id)
@@ -35,6 +39,7 @@ def add_cart(request, product_id):
         cart_item = CartItem.objects.create(product=product, quantity=1, cart=cart)
 
     return redirect('cart:cart_detail')
+
 
 def cart_detail(request, total=0, counter=0, cart_items=None):
     discount = 0
@@ -130,6 +135,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
         'voucher': voucher,
         'discount': discount
     })
+
 
 def cart_remove(request, product_id):
     cart = Cart.objects.get(cart_id=_cart_id(request))

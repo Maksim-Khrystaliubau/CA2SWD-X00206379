@@ -7,6 +7,7 @@ georgi - shop/templates/contact
 
 # Maksim 
 
+http://x2006738tud.pythonanywhere.com/
 maksim - created the models order, accounts, onlineshop, cart, products, 
 maksim - json population, admin, product desc/images,
 maksim - user creation, added categories.
